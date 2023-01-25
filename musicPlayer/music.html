@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecteur de musique</title>
+    <link rel="stylesheet" href="music.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/aeaae0a82e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+    <section id="container">
+        <!-- div du lecteur -->
+        <div class="lecteur">
+            <!-- Navbar -->
+            <nav>
+                <div class="circle"><i class="fa-solid fa-angle-left"></i></div>
+                <div class="circle"><i class="fa-solid fa-bars"></i></div>
+            </nav>
+            <!-- Cover de l'album -->
+            <img src="https://static.fnac-static.com/multimedia/FR/Images_Produits/FR/fnac.com/Visual_Principal_340/0/1/8/0728706300810/tsp20120923101435/All-eyez-on-me-remasterise.jpg"
+                alt="album-cover" class="album-cover">
+            <!-- Titre de la chanson -->
+            <h1>Changes</h1>
+            <!-- Auteur de la chanson -->
+            <p>Tupac Shakur</p>
+
+            <!-- Controles du lecteur -->
+            <audio  id="song">
+                <source src="2Pac - Changes ft. Talent.mp3" type="audio/mpeg">
+            </audio><br>
+            <!-- Volume du lecteur -->
+            <i class="fa-solid fa-volume-high"></i> <input type="range" value="0" id="progressVolume">
+            <!-- Barre de progression -->
+            <input type="range" value="0" id="progress">
+            <!-- Boutons de controles -->
+            <div class="controls">
+                <div><i class="fa-solid fa-shuffle"></i></div>
+                <div><i class="fa-solid fa-backward-step"></i></div>
+                <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+                <div><i class="fa-solid fa-forward-step"></i></div>
+                <div><i class="fa-solid fa-repeat"></i></div>
+            </div>
+        </div>
+        <!-- Fin de la div du lecteur -->
+    </section>
+    </main>
+    <script src="music.js"></script>
+</body>
+
+</html>
