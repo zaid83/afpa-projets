@@ -3,12 +3,16 @@
 let progress = document.getElementById("progress");
 let song = document.getElementById("song");
 let ctrlIcon = document.getElementById("ctrlIcon");
+let volumeSong = document.getElementById("progressVolume");
+
+song.volume = 0.5;
 
 // Durée de la musique = barre de progression
 
 song.onloadedmetadata = function () {
     progress.max = song.duration;
     progress.value = song.currentTime;
+    volumeSong.value = song.volume;
 }
 
 // Fonction Play/Pause avec changement d'icones
@@ -44,3 +48,9 @@ progress.onchange = function (){
     ctrlIcon.classList.add('fa-pause');
 
 }
+
+volumeSong.onchange = function (){
+    song.volume = volumeSong.value;
+
+}
+
