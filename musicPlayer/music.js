@@ -24,10 +24,13 @@ let tracksId = 0;
 let trackIsPlaying = false;
 let repeat = false;
 let shuffle = false;
+let trackPlayed = false;
 
 
 //Chargement de la track et des informations
 loadTrack();
+
+
 
 // Volume de base
 song.volume = 0.5;
@@ -88,6 +91,7 @@ function playPause() {
         ctrlIcon.classList.add('fa-play');
         ctrlIcon.classList.remove('fa-pause');
         trackIsPlaying = false;
+      imgTrack.classList.remove("rotate");
 
     }
     else {
@@ -95,6 +99,7 @@ function playPause() {
         ctrlIcon.classList.remove('fa-play');
         ctrlIcon.classList.add('fa-pause');
         trackIsPlaying = true;
+        imgTrack.classList.add("rotate");
     }
 }
 
@@ -159,11 +164,11 @@ function repeatTrack() {
 // passer a la musique suivante au hasard 
 function shuffleTrack() {
     shuffle = true;
-    let trackplaying = tracksId;
+    let trackplayed= tracksId;
 
     let randomId = Math.floor(Math.random() * tracks.length);
 
-    if (shuffle && repeat == false && randomId != trackplaying) {
+    if (shuffle && repeat == false && randomId != trackplayed) {
 
         tracksId = randomId;
         console.log(tracksId);
@@ -172,3 +177,4 @@ function shuffleTrack() {
         shuffle == false;
     }
 }
+
