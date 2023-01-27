@@ -122,6 +122,30 @@ nav .circle {
   
 }
 .repeatActive {
+  color: white !important;
+  background-color:#A4D4FF !important;
+}
+
+.shuffleActive {
+  color: white !important;
+  background-color:#A4D4FF !important;
+}
+
+#repeat {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0px 2px 10px #A4D4FF;
+  color: #A4D4FF;
+  cursor: pointer;
+}
+#repeat:hover {
+  transform: scale(1.5);
   color: white;
    background-color:#A4D4FF;
 }
