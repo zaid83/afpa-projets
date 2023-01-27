@@ -1,6 +1,12 @@
 
 // initialisation
-
+const options = {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': '263f8622b6msh13c42c737f25ffep199739jsn50a6197de45d',
+        'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+    }
+};
 // Recuperer  les élémeents du DOM par l'id
 
 let track = document.getElementById("trackmp3");
@@ -15,11 +21,11 @@ let authorTrack = document.getElementById("authorTrack");
 let backtrack = document.getElementById("backtrack");
 let fortrack = document.getElementById("fortrack");
 let imgTrack = document.getElementById("imgTrack");
-let artists = ["Tupac Shakur", "Artic Monkeys", "Damso", "Damso"];
+/*let artists = ["Tupac Shakur", "Artic Monkeys", "Damso", "Damso"];
 let titles = ["Changes", "R U Mine", "J Respect R", "Tueurs"];
 let covers = ["https://static.fnac-static.com/multimedia/FR/Images_Produits/FR/fnac.com/Visual_Principal_340/0/1/8/0728706300810/tsp20120923101435/All-eyez-on-me-remasterise.jpg",
     "https://i.ytimg.com/vi/ngzC_8zqInk/hqdefault.jpg", "https://static.fnac-static.com/multimedia/Images/FR/NR/4f/77/9a/10123087/1507-1/tsp20221209165218/Ipseite.jpg", "https://images.genius.com/8acfc71149a71fa2d33061a21b4196cc.958x958x1.png"];
-const tracks = ["2Pac - Changes ft. Talent.mp3", "Arctic Monkeys - R U Mine.mp3", "Damso - N. J Respect R.mp3", "Tueurs.mp3"];
+const tracks = ["2Pac - Changes ft. Talent.mp3", "Arctic Monkeys - R U Mine.mp3", "Damso - N. J Respect R.mp3", "Tueurs.mp3"];*/
 let tracksId = 0;
 let trackIsPlaying = false;
 let repeat = false;
@@ -30,20 +36,26 @@ let trackPlayed = false;
 //Chargement de la track et des informations
 loadTrack();
 
-
-
 // Volume de base
 song.volume = 0.5;
 
 
 
+
+
 function loadTrack() {
 
-    imgTrack.src = covers[tracksId];
-    authorTrack.textContent = artists[tracksId];
-    titleTrack.textContent = titles[tracksId];
-    track.src = tracks[tracksId];
-    song.load();
+    
+    fetch('https://spotify23.p.rapidapi.com/playlist_tracks/?id=37i9dQZF1DX4Wsb4d7NKfP&offset=0&limit=100', options)
+        .then(response => response.json())
+        .then(response =>   {
+            console.log(response);
+    imgTrack.src = response.items[tracksId].track.album.images[0].url;
+    authorTrack.textContent = response.items[tracksId].track.artists[0].name;
+    titleTrack.textContent = response.items[tracksId].track.name;
+    track.src = response.items[tracksId].track.preview_url + ".mp3";
+    song.load();})
+    .catch(err => console.error(err));
 }
 
 
@@ -105,6 +117,11 @@ function playPause() {
 
 // Fonction pour passer à la musique précédente
 function backTrack() {
+    fetch('https://spotify23.p.rapidapi.com/playlist_tracks/?id=37i9dQZF1DX4Wsb4d7NKfP&offset=0&limit=100', options)
+    .then(response => response.json())
+    .then(response => {
+
+
     if (tracksId > 0) {
         tracksId--;
         loadTrack();
@@ -112,11 +129,13 @@ function backTrack() {
 
     }
     else {
-        tracksId = tracks.length - 1;
+        tracksId = response.items.length - 1;
         loadTrack();
         song.play();
 
     }
+})
+.catch(err => console.error(err));
 
 }
 
@@ -124,7 +143,11 @@ function backTrack() {
 // Fonction pour passer à la musique suivante
 function forTrack() {
 
-    if (tracksId < tracks.length - 1) {
+    fetch('https://spotify23.p.rapidapi.com/playlist_tracks/?id=37i9dQZF1DX4Wsb4d7NKfP&offset=0&limit=100', options)
+    .then(response => response.json())
+    .then(response => {
+
+    if (tracksId < response.items.length - 1) {
         tracksId++;
         loadTrack();
         song.play();
@@ -136,7 +159,8 @@ function forTrack() {
         song.play();
 
     }
-
+    })
+    .catch(err => console.error(err));
 }
 
 // Fonction pour répéter la musiquess
@@ -165,16 +189,30 @@ function repeatTrack() {
 function shuffleTrack() {
     shuffle = true;
     let trackplayed= tracksId;
+    fetch('https://spotify23.p.rapidapi.com/playlist_tracks/?id=37i9dQZF1DX4Wsb4d7NKfP&offset=0&limit=100', options)
+    .then(response => response.json())
+    .then(response => {
 
-    let randomId = Math.floor(Math.random() * tracks.length);
+
+    let randomId = Math.floor(Math.random() * response.items.length);
 
     if (shuffle && repeat == false && randomId != trackplayed) {
 
         tracksId = randomId;
-        console.log(tracksId);
         loadTrack();
         song.play();
         shuffle == false;
     }
+    
+    else if (shuffle && repeat == false && randomId == trackplayed) {
+        if (tracksId < response.items.length - 1){
+        tracksId++;
+        loadTrack();
+        song.play();
+        shuffle == false;
+        }
+    }
+})
+.catch(err => console.error(err));
 }
 
