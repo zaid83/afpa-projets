@@ -13,7 +13,7 @@ body {
   background-color: black;
   color: white;
   font-family: 'Netflix';
-  padding: 1% 2%;
+  padding: 0% 2%;
 }
 a {
   text-decoration: none;
@@ -23,7 +23,7 @@ a:visited {
   
 }
 header {
-  height: 900px;
+  height: 800px;
   
 }
 .nav-container {
@@ -53,7 +53,7 @@ color: red;
  
 }
 .description-hero-container {
-  margin-top: 20%;
+  margin-top: 6%;
   font-family: 'Poppins', sans-serif;
 }
 .description-title {
@@ -87,7 +87,7 @@ background-color: white;
   color: red;
 }
 #background-video {
-    height: 100vh;
+    height: 90%;
     width: 100vw;
     object-fit: cover;
     position:absolute;
@@ -145,7 +145,24 @@ background-color: white;
     right: 0;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
     }
-    
+.wrapper .item img{
+  width: auto;
+  height: 192px;
+}
+
+.modal-wrapper {
+  display: none;
+  position:fixed;
+  top: 5%;
+  left: 3%;
+  z-index: 20;
+
+}
+.modal-video {
+  width: 50%;
+  height: 20%;
+}
+
     @media only screen and (max-width: 600px) {
     a.arrow__btn {
     display: none;
