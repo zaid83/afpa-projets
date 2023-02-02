@@ -17,7 +17,7 @@ header a,header svg {
 }
 
 header {
-  padding: 8px 20%;
+  padding: 8px 10%;
   width: 100%;
   height: 60px;
   display: flex;
@@ -72,30 +72,29 @@ width: 24px;
   height: 24px;
 }
 main {
-   padding: 8px 20%;
+   padding: 8px 10%;
 }
 
 .main-container  {
   display: grid;
-  grid-template-columns: 20% 50% 30%;
+  grid-template-columns: 22% 50% 30%;
   gap: 2rem;
 }
-.profile-container {
+.profile-container, .tags-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   border: 1px solid grey;
-  border-radius: 20px;
-  
+  border-radius: 10px;
+  background-color: white;
   
 }
+
 .profile-container img{
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  top: 20px;
-  left: 35%;
   position: absolute;
+  top: 10px
  
   
 }
@@ -104,12 +103,14 @@ main {
 }
 .bg-profile-container {
   background-image: url("../img/bg.png");
-  background-size: cover;
-  background-position: 0px -15px;
-  background-repeat: no-repeat;
-  height: 70px;
+  height: 60px;
   position: relative;
-  margin-bottom: 15px;
+  border-radius: 10px 10px 0px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+   display: flex;
+   justify-content: center;
+  align-items: center;
   
 }
 .profile-header {
@@ -117,10 +118,95 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 30px;
 }
 
+.relations-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-top: 1px dotted grey;
+}
+.number-relations  {
+  color: blue;
+}
+.relations span {
+  color: black;
+}
+.icon-text {
+  display: flex;
+
+}
+.infos-container {
+  padding:10px;
+  border-top: 1px dotted grey;
+  border-bottom: 1px dotted grey;
+}
+.element-text {
+  padding: 10px;
+}
+.wrapper-tags{
+  padding: 10px;
+  border-bottom: 1px dotted;
+}
+.tags-container li {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem
+}
+.tags-container svg {
+  color: grey;
+  width: 15px;
+}
+.tags-container ul a {
+  color: grey;
+  text-decoration: none;
+}
+.tags-container .group {
+  padding: 6% 0%;
+}
+.tags-container .group a {
+  color: blue;
+}
+.discover {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.postComment-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem
+}
+.img-input-container {
+display: flex;
+  gap: 1rem;
+}
+.img-input-container input {
+  width: 100%;
+}
+.actions-list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.img-input-container img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+
 #first-column, #second-column, #third-column {
-  width: ;
   height: 600px;
-  background-color: white;
+  border-radius: 10px;
+}
+#first-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.grey {
+  color:grey;
 }
