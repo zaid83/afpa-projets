@@ -85,16 +85,18 @@ main {
   flex-direction: column;
   gap: 1rem;
   border: 1px solid grey;
+  border-radius: 20px;
+  
   
 }
 .profile-container img{
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  position: sticky;
-  top: 0px;
-  padding: 0;
-  margin: 0;
+  top: 20px;
+  left: 35%;
+  position: absolute;
+ 
   
 }
 .profile-container svg{
@@ -106,6 +108,8 @@ main {
   background-position: 0px -15px;
   background-repeat: no-repeat;
   height: 70px;
+  position: relative;
+  margin-bottom: 15px;
   
 }
 .profile-header {
