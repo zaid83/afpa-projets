@@ -28,7 +28,7 @@ header {
   box-shadow: inset 450px -20px 100px 100px rgba(0,0,0,1);
   background-repeat:no-repeat;
   background-position: 300px ;
-  background-size:contain;
+  background-size:cover;
 }
 .nav-container {
   display: flex;
