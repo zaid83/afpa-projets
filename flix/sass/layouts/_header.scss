@@ -1,0 +1,97 @@
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 10rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+
+    @include responsive(tab-port) {
+        padding: 20rem 50px;
+
+    }
+
+    &__bg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+        max-width: 55rem;
+
+        & h4 {
+            color: rgba($color-white, 0.5);
+            font-weight: 500;
+
+            & span {
+                padding: 0 10px;
+                border-right: 1px solid rgba($color-white, 0.5);
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    border-right: none;
+                }
+
+                & i {
+                    background-color: $color-red;
+                    color: $color-white;
+                    padding: 0 8px;
+                    display: inline-block;
+                    font-style: normal;
+                    border-radius: 2px;
+                }
+            }
+
+        }
+
+        & p {
+            font-size: 1em;
+            font-weight: 300;
+            line-height: 1.5em;
+            color: $color-white;
+            margin: 1rem 0 2rem;
+
+        }
+
+    }
+
+    &__buttons {
+        position: relative;
+
+        & a {
+            position: relative;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 6px 20px;
+            background: rgba($color-black, 0.5);
+            border: 1px solid rgba($color-white, 0.1);
+            cursor: pointer;
+
+            &:hover {
+                background: $color-red;
+            }
+
+            & i {
+                margin-right: 5px;
+            }
+        }
+    }
+
+
+
+    &__movieTitle {
+        max-width: 25rem;
+    }
+
+}

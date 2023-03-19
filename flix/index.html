@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrailerFlix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="header__logo"><img src="public/img/logo.png" alt="logo TrailerFlix"></a>
+        <ul class="header__navigation">
+            <li><a href="" class="header__navigation-links">Daiz83</a></li>
+            <li><a href="" class="header__navigation-links">Séries</a></li>
+            <li><a href="" class="header__navigation-links">Films</a></li>
+            <li><a href="" class="header__navigation-links">Nouveautés</a></li>
+            <li><a href="" class="header__navigation-links">Mes Videos</a></li>
+        </ul>
+        <div class="header__search">
+            <input type="text" placeholder="Rechercher">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </header>
+    <div class="banner">
+        <img src="public/img/bg.jpg" alt="background image banner" class="banner__bg">
+        <div class="banner__content">
+            <img src="public/img/name.png" alt="nom du film" class="banner__movieTitle">
+            <h4>
+                <span>2020</span><span><i>12+</i></span><span>1h55min</span><span>Action</span>
+            </h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima soluta sed suscipit? Fugit labore ipsam,
+                asperiores amet, vel, maxime assumenda beatae eveniet similique ipsa earum fuga aperiam! Fuga, accusamus
+                eligendi. Lorem ipsum dolor sit amet.</p>
+            <div class="banner__buttons">
+                <a onclick="toggleVideo();"><i class=" fa-solid fa-play"></i>Jouer</a>
+                <a href=""><i class="fa-solid fa-film"></i>Mes Videos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="trailer">
+        <video class="trailer__video" src="public/img/vid1.mov" controls autoplay></video>
+        <img onclick="toggleVideo();" src="public/img/close.png" alt="ferme trailer" class="trailer__close">
+    </div>
+
+    <script src="public/js/trailer.js"></script>
+</body>
+
+</html>
