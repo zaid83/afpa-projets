@@ -1,77 +1,91 @@
 @font-face {
-    font-family: 'Netflix';
-    src: url(BebasNeue.otf);
-  }
+  font-family: 'Netflix';
+  src: url(BebasNeue.otf);
+}
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-   
+
 }
+
 body {
   background-color: black;
   color: white;
   font-family: 'Netflix';
   padding-left: 2%;
 }
+
 a {
   text-decoration: none;
 }
+
 a:visited {
- color: inherit;
-  
+  color: inherit;
+
 }
+
 header {
-  height:750px;
+  height: 750px;
   background-image: url("https://trailers.apple.com/trailers/lions_gate/detective-knight-independence/images/background.jpg");
-  box-shadow: inset 450px -20px 100px 100px rgba(0,0,0,1);
-  background-repeat:no-repeat;
-  background-position: 300px ;
-  background-size:cover;
+  box-shadow: inset 450px -20px 100px 100px rgba(0, 0, 0, 1);
+  background-repeat: no-repeat;
+  background-position: 300px;
+  background-size: cover;
 }
+
 .nav-container {
   display: flex;
   width: 100%;
 }
+
 .nav-container .logo {
   font-size: 40px;
 
   color: red;
 }
+
 .nav-list {
   display: flex;
   align-items: center;
   list-style-type: none;
   letter-spacing: 1px;
-  font-weight:700;
-    font-family: 'Poppins', sans-serif;
- 
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+
 }
+
 .nav-list .items {
-margin-left: 5em;
- 
+  margin-left: 5em;
+
 }
+
 .nav-list .items:hover {
-color: red;
- 
+  color: red;
+
 }
+
 .description-hero-container {
   margin-top: 6%;
   font-family: 'Poppins', sans-serif;
 }
+
 .description-title {
   font-size: 6em;
 }
+
 .description-text {
   letter-spacing: 3px;
   width: 40%;
-  font-weight:700;
+  font-weight: 700;
 }
+
 .fa-play {
   padding: 0px 10px;
   font-size: 20px;
 }
+
 .description-button {
 
   margin-top: 8%;
@@ -80,86 +94,96 @@ color: red;
   border: 1px solid white;
   border-radius: 8%;
   color: black;
-background-color: white;
+  background-color: white;
   text-transform: uppercase;
   font-weight: 700;
   cursor: pointer;
-  letter-spacing: 2px; 
-  
+  letter-spacing: 2px;
+
 }
-.description-button:hover{
+
+.description-button:hover {
   background-color: red;
-  color:white;
+  color: white;
 }
- 
+
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 100%);
-    overflow: hidden;
-    scroll-behavior: smooth;
-    }
-    .wrapper section {
-    width: 100%;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    margin: 20px 0;
-    }
-    .wrapper section .item {
-    padding: 0 2px;
-    transition: 250ms all;
-      position: relative;
-    }
-    .wrapper section .item:hover {
-    margin: 0 40px;
-    transform: scale(1.2);
-    }
-    .wrapper section a {
-    position: absolute;
-    color: white;
-    text-decoration: none;
-    font-size: 6em;
-    background: black;
-    width: 60px;
-    padding: 40px;
-    text-align: center;
-    z-index: 3;
-    }
-    .wrapper section a:nth-of-type(1) {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    color: white;
-    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
-    }
-    .wrapper section a:nth-of-type(2) {
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
-    }
-.wrapper .item img{
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.wrapper section {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  margin: 20px 0;
+}
+
+.wrapper section .item {
+  padding: 0 2px;
+  transition: 250ms all;
+  position: relative;
+}
+
+.wrapper section .item:hover {
+  margin: 0 40px;
+  transform: scale(1.2);
+}
+
+.wrapper section a {
+  position: absolute;
+  color: white;
+  text-decoration: none;
+  font-size: 6em;
+  background: black;
+  width: 60px;
+  padding: 40px;
+  text-align: center;
+  z-index: 3;
+}
+
+.wrapper section a:nth-of-type(1) {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  color: white;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+
+.wrapper section a:nth-of-type(2) {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+
+.wrapper .item img {
   width: auto;
   height: 192px;
 }
 
 #modal-wrapper {
-  display:none;
-  position:absolute;
+  display: none;
+  position: absolute;
   justify-content: center;
   left: 20%;
   top: 10%;
   z-index: 20;
 
 }
+
 #modal-video {
   width: 800px;
   height: 100%;
 }
+
 sup {
   color: white;
   position: absolute;
-  right:20px;
+  right: 20px;
   top: 2px;
 
   padding: 1% 2%;
@@ -168,12 +192,13 @@ sup {
   font-size: 20px;
   cursor: pointer;
 }
+
 sup:hover {
-  color:red;
+  color: red;
 }
 
 
-.wrapper section .item #link-trailer{
+.wrapper section .item #link-trailer {
 
   visibility: hidden;
   z-index: 10;
@@ -184,9 +209,3 @@ sup:hover {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6)
 }
-
-    @media only screen and (max-width: 600px) {
-    a.arrow__btn {
-    display: none;
-    }
-    }

@@ -178,6 +178,57 @@ body {
   max-width: 25rem;
 }
 
+.section {
+  width: 100%;
+  height: 20rem;
+  padding: 3rem 3rem 3rem 5rem;
+}
+.section__titles {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.section--1 {
+  height: 40rem;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #de0611;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.swiper-slide {
+  width: 80%;
+}
+
+.swiper-slide:nth-child(2n) {
+  width: 60%;
+}
+
+.swiper-slide:nth-child(3n) {
+  width: 40%;
+}
+
 .trailer {
   position: fixed;
   top: 50%;
