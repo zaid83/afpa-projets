@@ -6,15 +6,10 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    var_dump($email);
-    var_dump($password);
-
     $login = $pdo->prepare('SELECT * FROM users WHERE email = :email');
     $login->bindValue('email', $email);
     $login->execute();
     $res = $login->fetch(PDO::FETCH_ASSOC);
-
-    var_dump($res);
 
     if ($res) {
         $passwordHash = $res['password'];

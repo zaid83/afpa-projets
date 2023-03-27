@@ -20,8 +20,8 @@ if ($_SESSION['id']) {
             if (empty($title) || empty($img_article) || empty($content)) {
                 $message = 'Un des champs est vide';
 
-            } else if (strlen($title) >= 40) {
-                $message = "Le titre fait plus de 40 caractères";
+            } else if (strlen($title) >= 80) {
+                $message = "Le titre fait plus de 80 caractères";
             } else if (strlen($content) <= 200) {
                 $message = "L'article fait moins de 200 caractères";
 
@@ -29,7 +29,7 @@ if ($_SESSION['id']) {
                 $query = $pdo->prepare('INSERT INTO articles SET title = :title, img_article = :img_article, content = :content, date_article = NOW(), author = :author');
                 $query->execute(compact('title', 'img_article', 'content', 'author'));
                 //On renvoie l'utilisateur vers la page de remerciement
-                echo "Article ajouté";
+                header("Location:index.php");
             }
         }
     }
