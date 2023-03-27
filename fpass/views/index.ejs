@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <p>Welcome to <%= title %>
+  </p>
+  <form action="/envoi_email" method="post">
+    <input type="email" placeholder="entrer une adresse email" id="email" name="email">
+    <input type="submit" value="Envoyer le lien">
+  </form>
+  <%= mess %>
+</body>
+
+</html>

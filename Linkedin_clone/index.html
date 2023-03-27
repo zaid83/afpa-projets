@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linked in Clone</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <!-- barre de recherche -->
+    <div class="search-header">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="">
+      <input type="search" name="search" id="search" class="input-search-header" placeholder="Recherche">
+    </div>
+
+    <!--Navbar de droite -->
+    <ul class="nav-list">
+      <li class="nav-list-items nav-item1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+          <path d="M23 9v2h-2v7a3 3 0 01-3 3h-4v-6h-4v6H6a3 3 0 01-3-3v-7H1V9l11-7 5 3.18V2h3v5.09z"></path>
+        </svg><br><a href="" class="links-nav">Accueil</a></li>
+      <li class="nav-list-items nav-item2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+          <path
+            d="M12 16v6H3v-6a3 3 0 013-3h3a3 3 0 013 3zm5.5-3A3.5 3.5 0 1014 9.5a3.5 3.5 0 003.5 3.5zm1 2h-2a2.5 2.5 0 00-2.5 2.5V22h7v-4.5a2.5 2.5 0 00-2.5-2.5zM7.5 2A4.5 4.5 0 1012 6.5 4.49 4.49 0 007.5 2z">
+          </path>
+        </svg><br><a href="" class="links-nav">Réseau</a></li>
+      <li class="nav-list-items nav-item3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+          <path
+            d="M17 6V5a3 3 0 00-3-3h-4a3 3 0 00-3 3v1H2v4a3 3 0 003 3h14a3 3 0 003-3V6zM9 5a1 1 0 011-1h4a1 1 0 011 1v1H9zm10 9a4 4 0 003-1.38V17a3 3 0 01-3 3H5a3 3 0 01-3-3v-4.38A4 4 0 005 14z">
+          </path>
+        </svg><br><a href="" class="links-nav">Offres d'emploi</a></li>
+      <li class="nav-list-items nav-item4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+          <path
+            d="M16 4H8a7 7 0 000 14h4v4l8.16-5.39A6.78 6.78 0 0023 11a7 7 0 00-7-7zm-8 8.25A1.25 1.25 0 119.25 11 1.25 1.25 0 018 12.25zm4 0A1.25 1.25 0 1113.25 11 1.25 1.25 0 0112 12.25zm4 0A1.25 1.25 0 1117.25 11 1.25 1.25 0 0116 12.25z">
+          </path>
+        </svg><br><a href="" class="links-nav">Messagerie</a></li>
+      <li class="nav-list-items nav-item5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+          <path
+            d="M22 19h-8.28a2 2 0 11-3.44 0H2v-1a4.52 4.52 0 011.17-2.83l1-1.17h15.7l1 1.17A4.42 4.42 0 0122 18zM18.21 7.44A6.27 6.27 0 0012 2a6.27 6.27 0 00-6.21 5.44L5 13h14z">
+          </path>
+        </svg><br><a href="" class="links-nav">Notifications</a></li>
+      <li class="nav-list-items nav-item6"><img
+          src="https://www.seekpng.com/png/full/428-4287240_no-avatar-user-circle-icon-png.png" alt=""><br>
+        <a href="" class="links-nav">Vous</a>
+      </li>
+      <li class="nav-list-items nav-item7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+          <path
+            d="M3 3h4v4H3zm7 4h4V3h-4zm7-4v4h4V3zM3 14h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4zM3 21h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4z">
+          </path>
+        </svg><br><a href="" class="links-nav">Produits</a></li>
+      <li class="nav-list-items nav-item8"><a href="" class="links-nav">Essayez Premium<br>gratuitement</a></li>
+    </ul>
+  </header>
+
+
+  <!-- Main -->
+  <main>
+    <div class="main-container">
+
+      <aside id="first-column">
+
+        <div class="profile-container">
+          <div class="bg-profile-container">
+            <img class="photo-profile"
+              src="data:image/jpeg;base64,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"
+              alt="">
+          </div>
+          <div class="profile-header">
+
+
+            <p class="welcome bolder">Bonjour Zaïd</p>
+            <a href="" class="blue-link">Ajouter une photo</a>
+          </div>
+
+          <div class="relations-container">
+            <p class="grey relations">Relations <br> <span>Développez votre réseau</span></p><span
+              class="number-relations">53</span>
+          </div>
+
+          <div class="infos-container">
+            <p class="grey">Des infos et des outils exclusifs</p>
+            <div class="icon-text">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24"
+                class="mercado-match" width="24" height="24" focusable="false">
+                <path d="M20 20a3.36 3.36 0 001-2.39V6.38A3.38 3.38 0 0017.62 3H6.38A3.36 3.36 0 004 4z" fill="#f8c77e">
+                </path>
+                <path d="M4 4a3.36 3.36 0 00-1 2.38v11.24A3.38 3.38 0 006.38 21h11.24A3.36 3.36 0 0020 20z"
+                  fill="#e7a33e"></path>
+              </svg>
+              <a href="">Essayez Premium gratuitement</a>
+            </div>
+          </div>
+          <div class="element-text">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="bookmark-fill-small"
+              data-supported-dps="16x16" fill="currentColor">
+              <path d="M13 4a3 3 0 00-3-3H3v14l5-4.5 5 4.5z"></path>
+            </svg>
+            <a class="elements">Mes éléments</a>
+          </div>
+        </div>
+
+
+        <div class="tags-container">
+          <div class="wrapper-tags">
+            <p>Récent</p>
+            <ul class="recent-links">
+              <li class="tags-items tag-item1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M6.65 11h2l-.33 3h2l.33-3H14V9h-3.13l.26-2H14V5h-2.65l.33-3h-2l-.33 3h-2l.33-3h-2l-.33 3H2v2h3.13l-.26 2H2v2h2.65l-.33 3h2zm.48-4h2l-.26 2h-2z"></path>
+</svg><a href="">javascript</a></li>
+              <li class="tags-items tag-item2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M6.65 11h2l-.33 3h2l.33-3H14V9h-3.13l.26-2H14V5h-2.65l.33-3h-2l-.33 3h-2l.33-3h-2l-.33 3H2v2h3.13l-.26 2H2v2h2.65l-.33 3h2zm.48-4h2l-.26 2h-2z"></path>
+</svg><a href="">mysql</a></li>
+              <li class="tags-items tag-item3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M6.65 11h2l-.33 3h2l.33-3H14V9h-3.13l.26-2H14V5h-2.65l.33-3h-2l-.33 3h-2l.33-3h-2l-.33 3H2v2h3.13l-.26 2H2v2h2.65l-.33 3h2zm.48-4h2l-.26 2h-2z"></path>
+</svg><a href="">marketing</a></li>
+            </ul>
+            <ul class="group">
+              <li class="group-items"><a href="">Groupes</a></li>
+              <li class="group-items"><a href="">Evenements</a></li>
+              <li class="group-items"><a href="">Hashtags suivis</a></li>
+            </ul>
+            
+            <ul class="tags-suivis">
+              <li class="tags-items tag-item4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M6.65 11h2l-.33 3h2l.33-3H14V9h-3.13l.26-2H14V5h-2.65l.33-3h-2l-.33 3h-2l.33-3h-2l-.33 3H2v2h3.13l-.26 2H2v2h2.65l-.33 3h2zm.48-4h2l-.26 2h-2z"></path>
+</svg><a href="">javascript</a></li>
+              <li class="tags-items tag-item5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M6.65 11h2l-.33 3h2l.33-3H14V9h-3.13l.26-2H14V5h-2.65l.33-3h-2l-.33 3h-2l.33-3h-2l-.33 3H2v2h3.13l-.26 2H2v2h2.65l-.33 3h2zm.48-4h2l-.26 2h-2z"></path>
+</svg><a href="">mysql</a></li>
+              <li class="tags-items tag-item6"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M6.65 11h2l-.33 3h2l.33-3H14V9h-3.13l.26-2H14V5h-2.65l.33-3h-2l-.33 3h-2l.33-3h-2l-.33 3H2v2h3.13l-.26 2H2v2h2.65l-.33 3h2zm.48-4h2l-.26 2h-2z"></path>
+</svg><a href="">marketing</a></li>
+              <li class="tags-items tag-item6"><a href="">tout voir</a></li>
+            </ul>
+          </div>
+          <div class="discover">
+            <p>En découvrir plus</p>
+          </div>
+        </div>
+      </aside>
+
+
+
+      <section id="second-column">
+        <div class="postComment-container">
+             <div class="img-input-container">
+              <img src="img/profile.jpg" alt=""><input type="text" name="" id="" placeholder="  Commentez un post">
+            </div>
+            <div class="user-actions-list">
+              <ul class="actions-list">
+                <li class="action-items action-item1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                  <path d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm1 13a1 1 0 01-.29.71L16 14l-2 2-6-6-4 4V7a1 1 0 011-1h14a1 1 0 011 1zm-2-7a2 2 0 11-2-2 2 2 0 012 2z"></path>
+                </svg><a href="">Photo</a></li>
+                <li class="action-items action-item2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                  <path d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm-9 12V8l6 4z"></path>
+                </svg><a href="">Video</a></li>
+                <li class="action-items action-item3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                  <path d="M3 3v15a3 3 0 003 3h12a3 3 0 003-3V3zm13 1.75A1.25 1.25 0 1114.75 6 1.25 1.25 0 0116 4.75zm-8 0A1.25 1.25 0 116.75 6 1.25 1.25 0 018 4.75zM19 18a1 1 0 01-1 1H6a1 1 0 01-1-1V9h14zm-5.9-3a1 1 0 00-1-1H12a3.12 3.12 0 00-1 .2l-1-.2v-3h3.9v1H11v1.15a3.7 3.7 0 011.05-.15 1.89 1.89 0 012 1.78V15a1.92 1.92 0 01-1.84 2H12a1.88 1.88 0 01-2-1.75 1 1 0 010-.25h1a.89.89 0 001 1h.1a.94.94 0 001-.88z"></path>
+                </svg><a href="">Evenement</a></li>
+                <li class="action-items action-item4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                  <path d="M21 3v2H3V3zm-6 6h6V7h-6zm0 4h6v-2h-6zm0 4h6v-2h-6zM3 21h18v-2H3zM13 7H3v10h10z"></path>
+                </svg><a href="">Rédiger un article</a></li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="class-line"><div class="line"></div>
+        <span class="pertinence">Classer par:<strong>Pertinence</strong></span>
+      </div>
+
+        <article class="article-container">
+        <div class="header-article-container">
+          <div class="top-header-article">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Neymar_850_1705.jpg" alt="">
+            <div class="description-image-header">
+              <div class="title-container-article">
+                <p class="title-article">Jean Neymar</p> 
+              </div>
+              <p class="subtitle-article grey">Simulateur de Football</p>
+              <p class="date-article grey">08h</p>
+            </div>
+           
+          </div>
+          <br>
+          <p class="comment-article">J'adore le FUTCHBOL!!!! SAMBA , JUGA BONITO, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, aliquam!</p>
+        </div>
+        <div class="media-article-container">
+          <img src="https://static.onzemondial.com/photo_article/641143/244894/1200-L-real-madrid-bara-ronaldinho-et-sergio-ramos-se-chambrent-sur-twitter.jpg" alt="">
+         </div>
+         <div class="likes-container">
+          <div class="left-likes">
+            <span></span><p class="grey">Ronaldinho et 1500 autres personnes</p>
+          </div>
+          <div class="right-likes">
+            <p class="number-comments grey">
+              800 commentaires
+            </p>
+          </div>
+         </div>
+         <div class="action-article">
+          <ul class="actions-list article-list">
+            <li class="action-items action-item1"><svg role="none" aria-hidden="true" class="artdeco-button__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-supported-dps="24x24" data-test-icon="thumbs-up-outline-medium">
+              
+              </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="thumbs-up-outline-medium" data-supported-dps="24x24" fill="currentColor">
+                <path d="M19.46 11l-3.91-3.91a7 7 0 01-1.69-2.74l-.49-1.47A2.76 2.76 0 0010.76 1 2.75 2.75 0 008 3.74v1.12a9.19 9.19 0 00.46 2.85L8.89 9H4.12A2.12 2.12 0 002 11.12a2.16 2.16 0 00.92 1.76A2.11 2.11 0 002 14.62a2.14 2.14 0 001.28 2 2 2 0 00-.28 1 2.12 2.12 0 002 2.12v.14A2.12 2.12 0 007.12 22h7.49a8.08 8.08 0 003.58-.84l.31-.16H21V11zM19 19h-1l-.73.37a6.14 6.14 0 01-2.69.63H7.72a1 1 0 01-1-.72l-.25-.87-.85-.41A1 1 0 015 17l.17-1-.76-.74A1 1 0 014.27 14l.66-1.09-.73-1.1a.49.49 0 01.08-.7.48.48 0 01.34-.11h7.05l-1.31-3.92A7 7 0 0110 4.86V3.75a.77.77 0 01.75-.75.75.75 0 01.71.51L12 5a9 9 0 002.13 3.5l4.5 4.5H19z"></path>
+              </svg><a href="">J'aime</a></li>
+            <li class="action-items action-item2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+              <path d="M7 9h10v1H7zm0 4h7v-1H7zm16-2a6.78 6.78 0 01-2.84 5.61L12 22v-4H8A7 7 0 018 4h8a7 7 0 017 7zm-2 0a5 5 0 00-5-5H8a5 5 0 000 10h6v2.28L19 15a4.79 4.79 0 002-4z"></path>
+            </svg><a href="">Commenter</a></li>
+            <li class="action-items action-item3"><svg role="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-supported-dps="24x24" data-test-icon="repost-medium" class="">
+                
+              </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="repost-medium" data-supported-dps="24x24" fill="currentColor">
+              <path d="M13.96 5H6c-.55 0-1 .45-1 1v10H3V6c0-1.66 1.34-3 3-3h7.96L12 0h2.37L17 4l-2.63 4H12l1.96-3zm5.54 3H19v10c0 .55-.45 1-1 1h-7.96L12 16H9.63L7 20l2.63 4H12l-1.96-3H18c1.66 0 3-1.34 3-3V8h-1.5z"></path>
+            </svg><a href="">Republier</a></li>
+            <li class="action-items action-item4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+              <path d="M21 3L0 10l7.66 4.26L16 8l-6.26 8.34L14 24l7-21z"></path>
+            </svg><a href="">Envoyer</a></li>
+          </ul>
+         </div>
+        </article>
+
+
+        <article class="article-container">
+          <div class="header-article-container">
+            <div class="top-header-article">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Neymar_850_1705.jpg" alt="">
+              <div class="description-image-header">
+                <div class="title-container-article">
+                  <p class="title-article">Jean Neymar</p> 
+                </div>
+                <p class="subtitle-article grey">Simulateur de Football</p>
+                <p class="date-article grey">08h</p>
+              </div>
+             
+            </div>
+            <br>
+            <p class="comment-article">J'adore le FUTCHBOL!!!! SAMBA , JUGA BONITO, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, aliquam!</p>
+          </div>
+          <div class="media-article-container">
+            <img src="https://static.onzemondial.com/photo_article/641143/244894/1200-L-real-madrid-bara-ronaldinho-et-sergio-ramos-se-chambrent-sur-twitter.jpg" alt="">
+           </div>
+           <div class="likes-container">
+            <div class="left-likes">
+              <span></span><p class="grey">Ronaldinho et 1500 autres personnes</p>
+            </div>
+            <div class="right-likes">
+              <p class="number-comments grey">
+                800 commentaires
+              </p>
+            </div>
+           </div>
+           <div class="action-article">
+            <ul class="actions-list article-list">
+              <li class="action-items action-item1"><svg role="none" aria-hidden="true" class="artdeco-button__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-supported-dps="24x24" data-test-icon="thumbs-up-outline-medium">
+                
+                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="thumbs-up-outline-medium" data-supported-dps="24x24" fill="currentColor">
+                  <path d="M19.46 11l-3.91-3.91a7 7 0 01-1.69-2.74l-.49-1.47A2.76 2.76 0 0010.76 1 2.75 2.75 0 008 3.74v1.12a9.19 9.19 0 00.46 2.85L8.89 9H4.12A2.12 2.12 0 002 11.12a2.16 2.16 0 00.92 1.76A2.11 2.11 0 002 14.62a2.14 2.14 0 001.28 2 2 2 0 00-.28 1 2.12 2.12 0 002 2.12v.14A2.12 2.12 0 007.12 22h7.49a8.08 8.08 0 003.58-.84l.31-.16H21V11zM19 19h-1l-.73.37a6.14 6.14 0 01-2.69.63H7.72a1 1 0 01-1-.72l-.25-.87-.85-.41A1 1 0 015 17l.17-1-.76-.74A1 1 0 014.27 14l.66-1.09-.73-1.1a.49.49 0 01.08-.7.48.48 0 01.34-.11h7.05l-1.31-3.92A7 7 0 0110 4.86V3.75a.77.77 0 01.75-.75.75.75 0 01.71.51L12 5a9 9 0 002.13 3.5l4.5 4.5H19z"></path>
+                </svg><a href="">J'aime</a></li>
+              <li class="action-items action-item2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                <path d="M7 9h10v1H7zm0 4h7v-1H7zm16-2a6.78 6.78 0 01-2.84 5.61L12 22v-4H8A7 7 0 018 4h8a7 7 0 017 7zm-2 0a5 5 0 00-5-5H8a5 5 0 000 10h6v2.28L19 15a4.79 4.79 0 002-4z"></path>
+              </svg><a href="">Commenter</a></li>
+              <li class="action-items action-item3"><svg role="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-supported-dps="24x24" data-test-icon="repost-medium" class="">
+                  
+                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="repost-medium" data-supported-dps="24x24" fill="currentColor">
+                <path d="M13.96 5H6c-.55 0-1 .45-1 1v10H3V6c0-1.66 1.34-3 3-3h7.96L12 0h2.37L17 4l-2.63 4H12l1.96-3zm5.54 3H19v10c0 .55-.45 1-1 1h-7.96L12 16H9.63L7 20l2.63 4H12l-1.96-3H18c1.66 0 3-1.34 3-3V8h-1.5z"></path>
+              </svg><a href="">Republier</a></li>
+              <li class="action-items action-item4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                <path d="M21 3L0 10l7.66 4.26L16 8l-6.26 8.34L14 24l7-21z"></path>
+              </svg><a href="">Envoyer</a></li>
+            </ul>
+           </div>
+          </article>
+      </section>
+
+
+
+      <aside id="third-column">
+        <div class="news-container">
+           <p class="news-title">Linkedin Actualités</p>
+           <ul class="news-list">
+            <li class="news-list-items news-list-item1">
+              <a href="">Ces dix entreprises recrutent</a>
+              <p class="date-news grey"> il y a 43 min • 256 lecteurs
+</p>
+            </li>
+            <li class="news-list-items news-list-item2">
+              <a href="">Ces dix entreprises recrutent</a>
+              <p class="date-news grey"> il y a 43 min • 256 lecteurs
+</p>
+            </li>
+            <li class="news-list-items news-list-item3">
+              <a href="">Ces dix entreprises recrutent</a>
+              <p class="date-news grey"> il y a 43 min • 256 lecteurs
+</p>
+            </li>
+            <li class="news-list-items news-list-item4">
+              <a href="">Ces dix entreprises recrutent</a>
+              <p class="date-news grey"> il y a 43 min • 256 lecteurs
+</p>
+            </li>
+            <li class="news-list-items news-list-item5">
+              <a href="">Ces dix entreprises recrutent</a>
+              <p class="date-news grey"> il y a 43 min • 256 lecteurs
+</p>
+            </li>
+           </ul>
+        </div>
+        <div class="sponsors">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/2048px-Lidl-Logo.svg.png" alt="">
+                  <p>Trouvez l'entreprise qui a besoin de vous</p>
+                  <button>Rechercher un emploi</button>
+        </div>
+        <div class="footer-text">
+
+        </div>
+      </aside>
+    </div>
+
+  </main>
+</body>
+
+</html>
