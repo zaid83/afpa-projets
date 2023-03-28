@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 require('models/database.php');
@@ -17,6 +18,7 @@ $article = $resultats->fetch();
 $pageTitle = $article['title'];
 ob_start();
 require('templates/articles/article.html.php');
+require('comments.php');
 $pageContent = ob_get_clean();
 
 
