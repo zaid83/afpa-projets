@@ -24,11 +24,11 @@
                             </h2>
                         </a>
                         <p class="post-meta">
-                            Posted by
+                            Posté par
                             <a href="#!">
                                 <?= $article['pseudo'] ?>
                             </a>
-                            on
+                            le
                             <?= $article['date_article'] ?>
                         </p>
                     </div>
@@ -38,8 +38,8 @@
 
             <hr class="my-4" />
             <!-- Pager-->
-            <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older
-                    Posts →</a></div>
+            <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Anciens
+                    articles →</a></div>
         </div>
     </div>
 </div>

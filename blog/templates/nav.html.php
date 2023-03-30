@@ -11,15 +11,36 @@
             <?php if (session_id()) { ?>
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="postArticle.php">Nouvelle
-                            Article</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="profil.php">
-                            <?php echo $_SESSION['pseudo']; ?>
-                        </a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="logout.php">Se déconnecter</a>
-                    </li>
-                    <?php if ($_SESSION['role'] == "admin") { ?>
+                    <?php if (!isset($_SESSION['id'])) { ?>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="login.php">Se connecter</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="register.php">S'inscrire</a>
+                        </li>
+                    <?php } ?>
+                    <?php if (isset($_SESSION['id'])) { ?>
+
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="postArticle.php">Nouvelle
+                                Article</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="mesArticles.php">Mes Articles</a>
+                        </li>
+                        <?php if (isset($_SESSION['id']) && $_SESSION['role'] > 1) { ?>
+                            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="validateArticle.php">Valider
+                                    Article</a>
+                            </li>
+                        <?php } ?>
+
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
+                                href="profil.php?id=<?= $_SESSION['id'] ?>">
+                                <?php echo $_SESSION['pseudo']; ?>
+                            </a></li>
+
+
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="logout.php">Se déconnecter</a>
+                        </li>
+
+                    <?php } ?>
+                    <?php if (isset($_SESSION['id']) && $_SESSION['role'] == 3) { ?>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="admin.php">Admin</a></li>
                     <?php } ?>
                 </ul>

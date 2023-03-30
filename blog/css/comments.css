@@ -74,6 +74,8 @@
     border-top: 1px dashed #DDDDDD;
     padding: 20px 0;
     margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 #comments .media-body {
@@ -111,6 +113,14 @@
 
 }
 
+#comments .media-footer {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
 #comments .media-detail li {
     color: #AAAAAA;
     font-size: 12px;
@@ -136,4 +146,12 @@
 
 #comments form img {
     width: 100px;
+}
+
+.alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
 }
